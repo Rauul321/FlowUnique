@@ -1,9 +1,6 @@
 import react from 'react';
-<<<<<<< HEAD
 import { usePageTitle } from '../hooks/usePageTitle';
-=======
 import './RootPage.css';
->>>>>>> 08fccbf8b5fd0675ec2330751551923d532b126d
 
 function RootPage() {
     usePageTitle("FlowUNIQUE - Record Company");
