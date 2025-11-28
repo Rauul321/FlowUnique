@@ -1,0 +1,62 @@
+/* AuthModal.css - Asegúrate de que esto existe */
+.modal-backdrop {
+    position: fixed; /* ESENCIAL: Fija la posición en la ventana */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    z-index: 1000; /* ESENCIAL: Debe estar por encima de otros elementos */
+}
+
+.modal-content {
+    background-color: #333333;
+    padding: 30px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.auth-form {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: white;
+    background-color: #333333;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* Estilos adicionales para el botón */
+}
+
+.input-field {
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #444444;
+    color: white;
+}
+
+.submit-button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+    color: white;
+}

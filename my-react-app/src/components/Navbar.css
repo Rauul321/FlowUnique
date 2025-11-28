@@ -1,0 +1,67 @@
+/* src/components/Navbar.css */
+
+.navbar-container {
+    /* Propiedades de Layout Clave */
+    display: flex;
+    justify-content: center; /* 👈 Distribuye los tres bloques (Izquierda, Centro, Derecha) */
+    align-items: center; /* Centra verticalmente todos los elementos */
+
+    /* Estilos Fijos */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98%;
+    padding: 1rem;
+    background-color: #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* --- LOGO (IZQUIERDA) --- */
+.navbar-logo {
+    height: 70px; /* Tamaño del logo */
+}
+
+/* --- ENLACES CENTRALES --- */
+.navbar-center {
+    /* Permite que el bloque central se ajuste entre los otros dos */
+    flex-grow: 1;
+    /* Centra el menú horizontalmente DENTRO de este contenedor */
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 4rem; /* Espacio entre los enlaces centrales */
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.navbar-menu a:hover {
+    color: #007bff; /* Color de tu marca */
+}
+
+
+
+.navbar-profile-link {
+    color : white;
+    font-weight: 600;
+    transition: color 0.2s;
+    border-radius: 20px;
+}
+
+.navbar-profile-link:hover {
+    background-color: #007bff;
+    border: none;
+    transform: scale(1.05);
+}
+

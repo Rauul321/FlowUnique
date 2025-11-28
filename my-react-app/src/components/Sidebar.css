@@ -1,0 +1,83 @@
+
+/* src/components/Sidebar.css */
+
+/* 1. El contenedor de la Sidebar */
+.sidebar-container {
+    position: fixed; /* FLOTA sobre todo lo demás */
+    top: 0;
+    right: -400px; /* Empieza ESCONDIDO a la derecha (asumiendo ancho 300px) */
+    width: 300px;
+    height: 100vh; /* Ocupa toda la altura */
+    background-color: #222222;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    transition: right 0.3s ease; /* Animación suave al entrar/salir */
+    z-index: 1000; /* Asegura que esté por encima de la Navbar */
+    padding: 20px;
+}
+
+/* 2. Clase que se añade cuando isOpen es true */
+.sidebar-container.open {
+    right: 0; /* Se mueve a la vista */
+}
+
+/* 3. Botón de cerrar */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: white;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.login-button {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    padding: 10px 20px;
+    background-color: #007bff; /* Color de tu marca */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.signup-button {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    padding: 10px 20px;
+    background-color: #28a745; /* Color de tu marca */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+/* OPCIONAL: Fondo oscuro detrás */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Justo debajo de la sidebar */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
