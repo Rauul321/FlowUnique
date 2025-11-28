@@ -2,17 +2,20 @@
 const envs = require('dotenv');
 const express = require('express');
 const cors = require('cors');
+require('dotenv').config();
 
 const app = express();
 const db = require('./config/database.js'); // Asegúrate de tener un módulo db.js para manejar la conexión a la base de datos
 
-app.use(express.json());
+
 
 const corsOptions = {
-    origin: 'http://localhost:3000', // Cambia esto según la URL de tu frontend
+    origin: 'http://localhost:5173', // Cambia esto según la URL de tu frontend
+    optionsSuccessStatus: 200
 };
 
-app.use(cors(corsOptions));
+app.use(cors());
+app.use(express.json());
 
 app.get('/', (req, res) => {
     res.send('API funcionando correctamente');

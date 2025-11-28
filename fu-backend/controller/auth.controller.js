@@ -36,11 +36,15 @@ exports.login = async (req, res) => {
         if (!isPasswordValid) {
             return res.status(401).json({ message: "Contraseña incorrecta" });
         }
+        console.log("JWT_SECRET:", process.env.JWT_SECRET);
+        const token = jwt.sign({ id: user.id }, process.env["JWT_SECRET"], { expiresIn: '1h' });
 
-        const token = jwt.sign({ id: user.id }, process.env["JWT_SECRET "], { expiresIn: '1h' });
-
-        res.status(200).json({ message: "Login exitoso", token });
+        res.status(200).json({ message: "Login exitoso"}, token);
     } catch (error) {
-        res.status(500).json({ message: "Error al iniciar sesión", error: error.message });
+        console.error("ERROR EN LOGIN:", error);
+        return res.status(500).json({
+            message: "Error al iniciar sesión",
+            error: error.message
+        });
     }
 }
