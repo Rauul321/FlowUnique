@@ -3,9 +3,10 @@
 import { useState } from 'react'
 import flowLogo from '../assets/logo.PNG'
 import '../App.css'
+import { usePageTitle } from '../hooks/usePageTitle';
 
 function HomePage({ handleNavigation }) {
-
+    usePageTitle("FlowUNIQUE - Record Company");
     const [count, setCount] = useState(0)
 
     return (

@@ -8,7 +8,7 @@ import NVimage from '../assets/NV.jpg';
 import NavielImage from '../assets/Naviel.jpg';
 import GoneBeatsImage from '../assets/GoneBeats.jpg';
 import SergioImage from '../assets/SergioDiaz.jpg';
-
+import { usePageTitle } from '../hooks/usePageTitle.js';
 
 const artists = [
     {
@@ -36,6 +36,7 @@ const artists = [
 
 
 function ArtistsPage() {
+    usePageTitle("Our Featured Artists - FlowUNIQUE");
     return (
         <>
             <div className="grid-container">

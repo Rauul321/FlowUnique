@@ -4,10 +4,7 @@ import { Outlet } from 'react-router-dom';
 import Navbar from '../components/Navbar.jsx';
 import Sidebar from '../components/Sidebar.jsx';
 
-
-
 function DashboardPage() {
-
     const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
     const handleToggleSidebar = () => {
